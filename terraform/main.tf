@@ -21,3 +21,13 @@ module "vpc" {
   az2 = var.az2
 
 }
+
+module "iam" {
+
+  source = "../modules/iam"
+
+  project_name = var.project_name
+
+  environment = var.environment
+
+}
