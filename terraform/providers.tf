@@ -12,7 +12,7 @@ provider "aws" {
 
       ManagedBy = "Terraform"
 
-      Owner = "Madem Naveen"
+      Owner = var.owner
 
     }
 
