@@ -23,3 +23,9 @@ private_subnet_2_cidr = "10.0.12.0/24"
 az1 = "ap-south-1a"
 
 az2 = "ap-south-1b"
+
+instance_type = "t3.micro"
+
+ami_id = "ami-0f8a61b66d1accaee"
+
+key_name = "practice"
