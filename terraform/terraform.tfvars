@@ -29,3 +29,5 @@ instance_type = "t3.micro"
 ami_id = "ami-0f8a61b66d1accaee"
 
 key_name = "practice"
+
+bucket_name = "naveen-aws-production-webapp-2026"

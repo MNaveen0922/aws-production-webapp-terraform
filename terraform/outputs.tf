@@ -81,3 +81,47 @@ output "web_1_availability_zone" {
 output "web_2_availability_zone" {
   value = module.ec2.web_2_availability_zone
 }
+
+output "alb_id" {
+  value = module.alb.alb_id
+}
+
+output "alb_arn" {
+  value = module.alb.alb_arn
+}
+
+output "alb_dns_name" {
+  value = module.alb.alb_dns_name
+}
+
+output "alb_zone_id" {
+  value = module.alb.alb_zone_id
+}
+
+output "target_group_name" {
+  value = module.alb.target_group_name
+}
+
+output "target_group_arn" {
+  value = module.alb.target_group_arn
+}
+
+output "listener_arn" {
+  value = module.alb.listener_arn
+}
+
+output "bucket_name" {
+  value = module.s3.bucket_name
+}
+
+output "bucket_id" {
+  value = module.s3.bucket_id
+}
+
+output "bucket_arn" {
+  value = module.s3.bucket_arn
+}
+
+output "bucket_regional_domain_name" {
+  value = module.s3.bucket_regional_domain_name
+}

@@ -67,3 +67,37 @@ module "ec2" {
   key_name = var.key_name
 
 }
+
+module "alb" {
+
+  source = "../modules/alb"
+
+  project_name = var.project_name
+
+  environment = var.environment
+
+  vpc_id = module.vpc.vpc_id
+
+  public_subnet_1_id = module.vpc.public_subnet_1_id
+
+  public_subnet_2_id = module.vpc.public_subnet_2_id
+
+  alb_security_group_id = module.security_group.alb_security_group_id
+
+  web_1_instance_id = module.ec2.web_1_instance_id
+
+  web_2_instance_id = module.ec2.web_2_instance_id
+
+}
+
+module "s3" {
+
+  source = "../modules/s3"
+
+  project_name = var.project_name
+
+  environment = var.environment
+
+  bucket_name = var.bucket_name
+
+}

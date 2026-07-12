@@ -3,10 +3,10 @@ resource "aws_instance" "web_1" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
   subnet_id                   = var.private_subnet_1_id
-  vpc_security_group_ids       = [var.security_group_id]
-  iam_instance_profile         = var.instance_profile_name
+  vpc_security_group_ids      = [var.security_group_id]
+  iam_instance_profile        = var.instance_profile_name
   key_name                    = var.key_name
-  associate_public_ip_address  = false
+  associate_public_ip_address = false
 
   user_data = file("${path.root}/../userdata/install_nginx.sh")
 
@@ -40,10 +40,10 @@ resource "aws_instance" "web_2" {
   ami                         = var.ami_id
   instance_type               = var.instance_type
   subnet_id                   = var.private_subnet_2_id
-  vpc_security_group_ids       = [var.security_group_id]
-  iam_instance_profile         = var.instance_profile_name
+  vpc_security_group_ids      = [var.security_group_id]
+  iam_instance_profile        = var.instance_profile_name
   key_name                    = var.key_name
-  associate_public_ip_address  = false
+  associate_public_ip_address = false
 
   user_data = file("${path.root}/../userdata/install_nginx.sh")
 
