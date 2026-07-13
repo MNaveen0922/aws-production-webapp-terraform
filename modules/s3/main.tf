@@ -60,3 +60,30 @@ resource "aws_s3_bucket_ownership_controls" "this" {
   }
 
 }
+
+resource "aws_s3_object" "index" {
+  bucket       = aws_s3_bucket.this.id
+  key          = "index.html"
+  source       = "${path.root}/../website/index.html"
+  content_type = "text/html"
+
+  etag = filemd5("${path.root}/../website/index.html")
+}
+
+resource "aws_s3_object" "error" {
+  bucket       = aws_s3_bucket.this.id
+  key          = "error.html"
+  source       = "${path.root}/../website/error.html"
+  content_type = "text/html"
+
+  etag = filemd5("${path.root}/../website/error.html")
+}
+
+resource "aws_s3_object" "style" {
+  bucket       = aws_s3_bucket.this.id
+  key          = "style.css"
+  source       = "${path.root}/../website/style.css"
+  content_type = "text/css"
+
+  etag = filemd5("${path.root}/../website/style.css")
+}

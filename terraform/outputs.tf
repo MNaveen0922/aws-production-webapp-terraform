@@ -125,3 +125,23 @@ output "bucket_arn" {
 output "bucket_regional_domain_name" {
   value = module.s3.bucket_regional_domain_name
 }
+
+output "cloudfront_distribution_id" {
+  value = module.cloudfront.distribution_id
+}
+
+output "cloudfront_distribution_arn" {
+  value = module.cloudfront.distribution_arn
+}
+
+output "cloudfront_distribution_domain_name" {
+  value = module.cloudfront.distribution_domain_name
+}
+
+output "cloudfront_hosted_zone_id" {
+  value = module.cloudfront.distribution_hosted_zone_id
+}
+
+output "cloudfront_oac_id" {
+  value = module.cloudfront.oac_id
+}
